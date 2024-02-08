@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: <Widget>[
             ElevatedButton(
-              child: const Text('Get AlertDialog 1'),
+              child: const Text('AlertDialog 1'),
               onPressed: () {
                 DialogManager.instance.showMessageDialog(
                     StackedService.navigatorKey!.currentState!.overlay!.context,
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
               },
             ),
             ElevatedButton(
-              child: const Text('Get AlertDialog 2'),
+              child: const Text('AlertDialog 2'),
               onPressed: () {
                 DialogManager.instance.showMessageDialog(
                     StackedService.navigatorKey!.currentState!.overlay!.context,

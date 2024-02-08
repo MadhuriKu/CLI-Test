@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 class AnnimationDialog extends StatefulWidget {
@@ -65,14 +66,12 @@ class _SuccessDialogState extends State<AnnimationDialog>
                     )),
           )
 
-          // Lottie.asset(
-          //   'assets/animations/success_animation.json',
-          //   width: 30,
-          //   height: 30,
-          //   repeat: true, // Set to true if you want the animation to loop
-          //   reverse:
-          //       true, // Set to true if you want the animation to play in reverse
-          // )
+          // Lottie.network(
+          //   'https://assets1.lottiefiles.com/private_files/lf30_yQtj4O.json',
+          //   repeat: true,
+          //   reverse: true,
+          //   animate: true,
+          // ),
         ],
       ),
     );
