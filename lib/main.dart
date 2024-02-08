@@ -19,26 +19,26 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(title: Text('AlertDialog')),
+        appBar: AppBar(title: const Text('AlertDialog')),
         body: Column(
           children: <Widget>[
             ElevatedButton(
-              child: Text('Get AlertDialog 1'),
+              child: const Text('Get AlertDialog 1'),
               onPressed: () {
                 DialogManager.instance.showMessageDialog(
                     StackedService.navigatorKey!.currentState!.overlay!.context,
                     'Title 1',
-                    'You will never be satisfied.',
+                    'I’m  satisfied.',
                     "Success");
               },
             ),
             ElevatedButton(
-              child: Text('Get AlertDialog 2'),
+              child: const Text('Get AlertDialog 2'),
               onPressed: () {
                 DialogManager.instance.showMessageDialog(
                     StackedService.navigatorKey!.currentState!.overlay!.context,
                     'Title 2',
-                    'I’m  satisfied.',
+                    'You will never be satisfied.',
                     "Failure");
               },
             )

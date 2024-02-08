@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rounded_loading_button/rounded_loading_button.dart';
 
 class AnnimationDialog extends StatefulWidget {
   final String message;
@@ -16,6 +17,8 @@ class _SuccessDialogState extends State<AnnimationDialog>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _scaleAnimation;
+  final RoundedLoadingButtonController btnController =
+      RoundedLoadingButtonController();
 
   @override
   void initState() {
@@ -47,15 +50,29 @@ class _SuccessDialogState extends State<AnnimationDialog>
         title: Text(widget.title),
         content: Text(widget.message),
         actions: [
-          ElevatedButton(
+          RoundedLoadingButton(
+            height: 30,
+            width: 100,
+            color: (widget.buttontext == "Success") ? Colors.green : Colors.red,
             onPressed: () {
               Navigator.pop(context);
             },
-            child: Text(widget.buttontext,
-                style: const TextStyle(
-                  color: Colors.green,
-                )),
-          ),
+            controller: btnController,
+            child:
+                Text((widget.buttontext == "Success") ? "Success" : "Failure",
+                    style: const TextStyle(
+                      color: Colors.white,
+                    )),
+          )
+
+          // Lottie.asset(
+          //   'assets/animations/success_animation.json',
+          //   width: 30,
+          //   height: 30,
+          //   repeat: true, // Set to true if you want the animation to loop
+          //   reverse:
+          //       true, // Set to true if you want the animation to play in reverse
+          // )
         ],
       ),
     );

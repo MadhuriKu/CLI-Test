@@ -21,22 +21,5 @@ class DialogManager {
             title: title, message: desc, buttontext: buttonText);
       },
     );
-    // showDialog(
-    //   context: context,
-    //   builder: (BuildContext context) {
-    //     return AlertDialog(
-    //       title: Text(title),
-    //       content: Text(desc),
-    //       actions: <Widget>[
-    //         ElevatedButton(
-    //           child: Text(buttonText),
-    //           onPressed: () {
-    //             Navigator.of(context).pop();
-    //           },
-    //         ),
-    //       ],
-    //     );
-    //   },
-    // );
   }
 }
